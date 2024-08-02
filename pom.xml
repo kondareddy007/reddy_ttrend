@@ -15,10 +15,17 @@
         <packaging>jar</packaging>
         <description>Demo project for Spring Boot</description>
 
+<<<<<<< HEAD
         <properties>
                 <java.version>1.8</java.version>
                  <maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
         </properties>
+=======
+	<properties>
+		<java.version>17.0.11</java.version>
+		 <maven-jar-plugin.version>3.9.8</maven-jar-plugin.version>
+	</properties>
+>>>>>>> 7535a6ce68023eab20bac6e7c225916b1d7835b6
 
         <dependencies>
                 <dependency>
