@@ -8,7 +8,7 @@ pipeline {
          stage('Code pulling') {
              steps {
                 echo " We are downloding the code"
-                git credentialsId: 'github-credentials', url: 'https://github.com/kondareddy007/reddy_ttrend.git'
+                git 'https://github.com/kondareddy007/reddy_ttrend.git'
 
              }
          }
