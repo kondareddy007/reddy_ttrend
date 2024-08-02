@@ -5,9 +5,11 @@ pipeline {
          }
      }     
      stages {
-         stage('Build') {
+         stage('Code pulling') {
              steps {
-                echo "printenv"
+                echo " We are downloding the code"
+                git credentialsId: 'github-credentials', url: 'https://github.com/kondareddy007/reddy_ttrend.git'
+
              }
          }
      }    
