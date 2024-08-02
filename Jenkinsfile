@@ -3,13 +3,14 @@ pipeline {
         node {
             label 'maven-agent'
          }
+     }
+     environment {
+        PATH = "/opt/apache-maven-3.9.8/bin"
      }     
     stages {
         stage('Clone code') {
             steps {
-             echo " We are downloding the code"
-             git branch: 'master', url: 'https://github.com/kondareddy007/reddy_ttrend.git'
-
+                sh 'mvn clean install'
             }
          }
      }    
