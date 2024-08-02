@@ -11,7 +11,7 @@ pipeline {
         stage('Clone code') {
             steps {
                 // sh 'mvn clean install'
-		sh 'helloworld'
+		//sh 'helloworld'
                 echo "testing on multibranch pipeline"
             }
          }
