@@ -11,18 +11,18 @@ pipeline {
         stage('Build code') {
             steps {
             echo '------------------- Build Started -------------'
-                //sh 'mvn clean deploy -Dmaven.test.skip=true'
+                sh 'mvn clean deploy -Dmaven.test.skip=true'
                 echo '------------------- Build Completed -------------'
             }
          }
 
-         /*stage('Unit Test') {
+         stage('Unit Test') {
             steps{
                 echo '------------------- Unit Test Started -------------'
                 sh 'mvn surefire-report:report'
                 echo '------------------- Unit Test Completed -------------'
             }
-        }*/
+        }
 
          stage('SonarQube analysis') {
             environment{
