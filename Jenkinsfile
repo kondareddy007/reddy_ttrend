@@ -4,14 +4,14 @@ pipeline {
             label 'maven-agent'
          }
      }
-     //environment {
-       // PATH = "/opt/apache-maven-3.9.8/bin"
-    // }     
+     environment {
+        PATH = "/opt/maven/bin:$PATH "
+     }     
     stages {
-        stage('Clone code') {
+        stage('Build code') {
             steps {
-                // sh 'mvn clean install'
-		//sh 'helloworld'
+              sh 'mvn clean install'
+		  //sh 'helloworld'
                 echo "testing on multibranch pipeline"
             }
          }
