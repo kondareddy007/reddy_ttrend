@@ -4,9 +4,12 @@ pipeline {
             label 'maven-agent'
          }
      }
-     environment {
+     /*environment {
         PATH = "/opt/maven/bin:$PATH"
-     }     
+     }*/
+     tools {
+        maven 'M3'
+     }    
     stages {
         stage('Build code') {
             steps {
