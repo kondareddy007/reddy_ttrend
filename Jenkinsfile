@@ -1,4 +1,6 @@
 def registry = 'https://kondareddy1229.jfrog.io/'
+def imageName = 'kondareddy1229.jfrog.io/valaxy-docker-local/reddy-ttrend'
+def version   = '2.1.2'
 
 pipeline {
     agent {
@@ -77,7 +79,16 @@ pipeline {
             
             }
         }   
-    }   
+    } 
+        stage(" Docker Build ") {
+          steps {
+            script {
+               echo '<--------------- Docker Build Started --------------->'
+               app = docker.build(imageName+":"+version)
+               echo '<--------------- Docker Build Ends --------------->'
+            }
+          }
+        }  
  }
 }
 
