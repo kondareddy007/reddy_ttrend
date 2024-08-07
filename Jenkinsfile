@@ -88,7 +88,18 @@ pipeline {
                echo '<--------------- Docker Build Ends --------------->'
             }
           }
-        }  
+        } 
+        stage (" Docker Publish "){
+            steps {
+                script {
+                   echo '<--------------- Docker Publish Started --------------->'  
+                    docker.withRegistry(registry, 'artifactory-token'){
+                        app.push()
+                    }    
+                   echo '<--------------- Docker Publish Ended --------------->'  
+                }
+            }
+        } 
  }
 }
 
