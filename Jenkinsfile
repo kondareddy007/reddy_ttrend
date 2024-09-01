@@ -1,6 +1,6 @@
-def registry = 'https://kondareddy1229.jfrog.io/'
+/* def registry = 'https://kondareddy1229.jfrog.io/'
 def imageName = 'kondareddy1229.jfrog.io/valaxy-docker-local/ttrend'
-def version   = '2.1.2'
+def version   = '2.1.2' */
 
 pipeline {
     agent {
@@ -30,7 +30,7 @@ pipeline {
                 echo '------------------- Unit Test Completed -------------'
             }
          }
-          stage('SonarQube analysis') {
+          /* stage('SonarQube analysis') {
             environment {
             scannerHome = tool 'Valaxy-SonarScanner'
             }
@@ -41,7 +41,7 @@ pipeline {
     }
     echo '------------------- Sonar Analysis Completed -------------'
   }
-    }
+    } */
     /*stage("Quality Gate"){
         steps { 
             script {
@@ -55,7 +55,7 @@ pipeline {
         }
     }*/
     
-         stage("Jar Publish") {
+         /* stage("Jar Publish") {
         steps {
             script {
                     echo '<--------------- Jar Publish Started --------------->'
@@ -100,6 +100,6 @@ pipeline {
                 }
             }
         } 
- }
+ } */
 }
 
