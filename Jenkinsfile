@@ -100,7 +100,7 @@ pipeline {
                    echo '<--------------- Docker Publish Ended --------------->'  
                 }
             }
-        } 
- } */
+        } */
+ } 
 }
 
