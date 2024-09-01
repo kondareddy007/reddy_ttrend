@@ -31,13 +31,7 @@ pipeline {
                 echo '------------------- Unit Test Completed -------------'
             }
          }
-         stage('Integration Test') {
-          steps{
-            echo '------------------- Integrated Test Started -------------'
-                junit 'test-results.xml'
-                echo '------------------- Unit Test Completed -------------'
-          }
-         }
+         
          
           /* stage('SonarQube analysis') {
             environment {
