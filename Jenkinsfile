@@ -33,7 +33,7 @@ pipeline {
          }
          
          
-          /* stage('SonarQube analysis') {
+           stage('SonarQube analysis') {
             environment {
             scannerHome = tool 'Valaxy-SonarScanner'
             }
@@ -44,7 +44,7 @@ pipeline {
     }
     echo '------------------- Sonar Analysis Completed -------------'
   }
-    } */
+  } 
     /*stage("Quality Gate"){
         steps { 
             script {
