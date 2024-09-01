@@ -3,11 +3,12 @@ def imageName = 'kondareddy1229.jfrog.io/valaxy-docker-local/ttrend'
 def version   = '2.1.2' */
 
 pipeline {
-    agent {
+  agent none
+    /* agent {
         node {
             label 'maven-agent'
          }
-     }
+     } */
      /*environment {
         PATH = "/opt/maven/bin:$PATH"
      }*/
